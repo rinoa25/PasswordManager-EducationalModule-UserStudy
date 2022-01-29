@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- page will not show up in any search engine results -->
+    <meta charset="utf-8" name="robots" content="noindex, nofollow">
+    <!-- Sets title of web tab -->
+    <title>MTurk Worker ID Verification</title>
+    <!-- Personal CSS is imported (thus applied) -->
+    <link rel="stylesheet" href="css/creds.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <form id="creds" name="verification" onsubmit="event.preventDefault();checkValidation();" autocomplete="off" method="post">
+
+        <fieldset>
+
+          <h2 class="header">Verification</h2>
+
+          <!-- Worker ID textfield -->
+          <div class="container {{#if message}}{{message.type}}{{/if}}">
+
+            <input name = "DummyID" id="DummyID" type="text" value="{{#if message}}{{message.number}}{{/if}}" style="display:none;">
+
+            <label><b>MTurk Worker ID</b></label><br>
+            <input type="text" placeholder="Enter your Worker ID" class="workerid" id="workerid" name="workerid" value="{{#if message}}{{message.inputval}}{{/if}}" autocorrect="off" spellcheck="false" autocomplete="off" style="min-height: 53px;font-size:16px;padding:15px;">
+
+            <!-- Displays bottom error message towards Worker ID validation -->
+            <div class="bottomerror">
+              <small>{{#if message}}{{message.message}}{{/if}}</small>
+            </div>
+
+          <!-- End of Worker ID textfield -->
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="submit">Submit</button>
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
+    <!-- Script points towards my JS file -->
+    <script src = "js/verification.js"></script>
+
+    <script>$('input').attr('autocomplete', 'off');</script>
+
+  </body>
+</html>

@@ -1,0 +1,116 @@
+/* CSS file for prerequisite.html only */
+
+/* Imports custom font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Sets the font of the entire page, customizes background & ensures form is responsive */
+html, body {
+  font-family: montserrat, arial, verdana;
+  background-color: #CCCCFF;
+  margin: 0;
+}
+
+/* Ensures everything is positioned correctly */
+* {
+  box-sizing: border-box;
+}
+
+/* Customizes header / title of page */
+.header {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+
+/* Customizes the spacing of the page content */
+.content {
+  /* top / right / bottom/ left */
+  padding: 10 20 20 20;
+}
+
+/* Creates four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Customizes the signup option cards */
+.card {
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+}
+
+/* Shadow will appear when user hovers over the options */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+/* Customizes the corners of the picture inside sign up option cards */
+img {
+  /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
+  border-radius: 5px 5px 0 0;
+}
+
+/* Customizes the description under card's image */
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+  height: 125px;
+}
+
+/* Submit button format */
+.submit {
+  color: #000;
+  background: #ddd;
+  font-weight: inherit;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+/* Gives submit button a "pressed-down" effect */
+.submit:active {
+  background-color: #ddd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* submit button on hover */
+.submit:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 850px) {
+  .active {
+    display: none;
+  }
+  .column {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .active {
+    display: none;
+  }
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

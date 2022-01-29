@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- page will not show up in any search engine results -->
+    <meta charset="utf-8" name="robots" content="noindex, nofollow">
+    <!-- Sets title of web tab -->
+    <title>Login Page</title>
+    <!-- Password font is imported (thus applied) -->
+    <link rel="stylesheet" href="node_modules/text-security/text-security-disc.css" type="text/css">
+    <!-- Personal CSS is imported (thus applied) -->
+    <link rel="stylesheet" href="css/creds.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <form id="creds" name="login" onsubmit="event.preventDefault();checkValidation();" autocomplete="off" method="post">
+
+        <fieldset>
+
+          <h2 class="header">Login Page</h2>
+
+          <!-- Username textfield -->
+          <div class="container">
+
+            <input name = "DummyUsername" type="text" style="display:none;">
+
+            <label><b>Username</b></label><br>
+            <input type="text" placeholder="Enter your username" class="username" id="username" name="username" value="" autocorrect="off" spellcheck="false" autocomplete="off" style="min-height: 53px;font-size:16px;padding:15px;">
+
+            <!-- Displays bottom error message towards username validation -->
+            <div class="bottomerror">
+              <small></small>
+            </div>
+
+          <!-- End of username textfield -->
+          </div>
+
+          <!-- Password textfield -->
+          <div class="container">
+
+            <input name = "DummyPassword" type="text" style="display:none;">
+
+            <label><b>Password</b></label><br>
+            <input type="text" placeholder="Enter your password" class="pass" id="pass" name="pass" value="" autocorrect="off" spellcheck="false" autocomplete="off" style="font-family: text-security-disc;min-height: 53px;font-size:16px;padding:15px;">
+
+            <!-- Displays bottom error message towards password validation -->
+            <div class="bottomerror">
+              <small></small>
+            </div>
+
+          <!-- End of password textfield -->
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="submit">Login</button>
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
+    <!-- Script points towards sweetalert JS file -->
+    <script src="node_modules\sweetalert2\dist\sweetalert2.all.min.js"></script>
+    <!-- Script points towards my JS file -->
+    <script src = "js/login.js"></script>
+
+    <script>$('input').attr('autocomplete', 'off');</script>
+
+  </body>
+</html>

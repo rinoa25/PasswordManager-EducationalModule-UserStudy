@@ -1,0 +1,197 @@
+/* CSS file for opinionpoll.html only */
+
+/* Imports custom font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Sets the font of the entire page, customizes background & ensures form is responsive */
+html, body {
+  font-family: montserrat, arial, verdana;
+  background: #CCCCFF;
+}
+
+/* Ensures everything is positioned correctly */
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Ensures form is centered */
+.wrapper {
+	position: fixed;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Customizes the form */
+#questions {
+  /* Customizes the size of the form */
+  min-width: 650px;
+  /* Customizes the position of the form to be centered */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* Ensures title and button are centered */
+	text-align: center;
+}
+
+/* Customizes the form further */
+#questions fieldset {
+  background: #FFFFFF;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	width: 85%;
+}
+
+/* Customizes header of form */
+.header {
+  font-size: 18px;
+  text-transform: uppercase;
+	color: #2C3E50;
+	margin: 20px auto;
+  font-weight: bolder;
+}
+
+/* Customizes opinion poll selections */
+
+.inputGroup {
+	 background-color: #8f92b1;
+	 display: block;
+	 margin: 10px 0;
+	 position: relative;
+}
+
+ .inputGroup label {
+	 padding: 12px 20px;
+	 width: 100%;
+	 display: block;
+	 text-align: left;
+	 color: white;
+	 cursor: pointer;
+	 position: relative;
+	 z-index: 2;
+	 transition: color 200ms ease-in;
+	 overflow: hidden;
+	 font-size: 15px;
+}
+
+ .inputGroup label:before {
+	 width: 10px;
+	 height: 10px;
+	 border-radius: 50%;
+	 content: '';
+	 background-color: #5562eb;
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%) scale3d(1, 1, 1);
+	 transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+	 opacity: 0;
+	 z-index: -1;
+}
+
+ /* .inputGroup label:after {
+	 width: 32px;
+	 height: 32px;
+	 content: '';
+	 border: 2px solid #d1d7dc;
+	 background-color: #fff;
+	 background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+	 background-repeat: no-repeat;
+	 background-position: 2px 3px;
+	 border-radius: 50%;
+	 z-index: 2;
+	 position: absolute;
+	 right: 30px;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 cursor: pointer;
+	 transition: all 200ms ease-in;
+} */
+
+ .inputGroup input:checked ~ label {
+	 color: #fff;
+}
+
+ .inputGroup input:checked ~ label:before {
+	 transform: translate(-50%, -50%) scale3d(56, 56, 1);
+	 opacity: 1;
+}
+
+ .inputGroup input:checked ~ label:after {
+	 background-color: #54e0c7;
+	 border-color: #54e0c7;
+}
+
+ .inputGroup input {
+	 width: 32px;
+	 height: 32px;
+	 order: 1;
+	 z-index: 2;
+	 position: absolute;
+	 right: 30px;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 cursor: pointer;
+	 visibility: hidden;
+}
+
+/* Submit button format */
+.submit {
+  color: #000;
+  background: #ddd;
+  font-weight: inherit;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+/* Gives submit button a "pressed-down" effect */
+.submit:active {
+  background-color: #ddd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* submit button on hover */
+.submit:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Ensures form is responsive */
+
+/* Applies to 650px and down */
+@media only screen and (max-width: 650px) {
+  #questions {
+    min-width: 550px;
+  }
+}
+
+/* Applies to 550px and down */
+@media only screen and (max-width: 550px) {
+  #questions {
+    min-width: 450px;
+  }
+}
+
+/* Applies to 450px and down */
+@media only screen and (max-width: 450px) {
+  #questions {
+    min-width: 350px;
+  }
+}
+
+/* Applies to 350px and down */
+@media only screen and (max-width: 350px) {
+  #questions {
+    min-width: 300px;
+  }
+}

@@ -1,0 +1,113 @@
+/* Imports custom font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Sets the font of the entire page, customizes background & ensures form is responsive */
+html, body {
+  font-family: montserrat, arial, verdana;
+  background: #CCCCFF;
+}
+
+/* Customizes the form */
+.box {
+  background: #FFFFFF;
+  /* Customizes the size of the form */
+  min-width: 650px;
+  /* Customizes the position of the form to be centered */
+  margin: auto;
+  /* Ensures title and button are centered */
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 1px 2px 4px rgba(0,0,0,.3);
+}
+
+/* Ensures form is centered */
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box .heading{
+   border-radius: 7px 7px 0px 0px;
+   background-color: #555;
+   color: white;
+   text-align: center;
+   padding: 10px 0px;
+}
+
+.questions {
+  padding: 0px 20px 20px;
+}
+
+details {
+  text-align: left;
+  background: #f6f6f6;
+  padding: 10px 20px;
+  border-radius: 7px;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+details summary {
+  outline: none;
+}
+
+/* Submit button format */
+.submit {
+  color: #000;
+  background: #ddd;
+  font-weight: inherit;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+/* Gives submit button a "pressed-down" effect */
+.submit:active {
+  background-color: #ddd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* submit button on hover */
+.submit:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Ensures form is responsive */
+
+/* Applies to 650px and down */
+@media only screen and (max-width: 650px) {
+  .box {
+    min-width: 550px;
+  }
+}
+
+/* Applies to 550px and down */
+@media only screen and (max-width: 550px) {
+  .box {
+    min-width: 450px;
+  }
+}
+
+/* Applies to 450px and down */
+@media only screen and (max-width: 450px) {
+  .box {
+    min-width: 350px;
+  }
+}
+
+/* Applies to 350px and down */
+@media only screen and (max-width: 350px) {
+  .box {
+    min-width: 300px;
+  }
+}

@@ -1,0 +1,227 @@
+/* CSS file for questionnaire.html only */
+
+/* Imports custom font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Sets the font of the entire page, customizes background & ensures form is responsive */
+html, body {
+  font-family: montserrat, arial, verdana;
+  background: #CCCCFF;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Ensures everything is positioned correctly */
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Ensures form is centered */
+.wrapper {
+	position: fixed;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Creates two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.defaultrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slide {
+  font-size: 15px;
+  text-transform: uppercase;
+	margin: 8px auto;
+  font-weight: bolder;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-right: none;
+}
+
+.slide2 {
+  border: 1px solid #CCCCCC;
+  border-left: none;
+  font-size: 15px;
+  text-transform: uppercase;
+	margin: 8px auto;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Clear floats after the columns */
+.secondrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Customizes the form */
+#questions {
+  /* Customizes the size of the form */
+  min-width: 650px;
+  /* Customizes the position of the form to be centered */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* Ensures title and button are centered */
+	text-align: center;
+}
+
+/* Customizes the form further */
+#questions fieldset {
+  background: #FFFFFF;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	width: 85%;
+}
+
+/* Customizes header of form */
+.header {
+  font-size: 18px;
+  text-transform: uppercase;
+	color: #2C3E50;
+	margin: 20px auto;
+  font-weight: bolder;
+}
+
+/* Ensures labels are positioned / formatted correctly*/
+.container {
+  width: 100%;
+}
+
+/* Customizes position & font size of labels*/
+.container label{
+  float: left;
+  margin-bottom: 5px;
+  font-size: small;
+	text-align: left;
+}
+
+/* Customizes the input boxes */
+#questions input[type=text], select, textarea {
+  color: #2C3E50;
+	font-size: 16px;
+  border: 1px solid #CCCCCC;
+	border-radius: 3px;
+  outline: none;
+  width: 100%;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Customizes the font of placeholder */
+input::placeholder {
+  font-family: arial;
+}
+
+/* Customizes position of bottom error message */
+.bottomerror {
+  position: absolute;
+  visibility: hidden;
+  font-size: 14px;
+  text-align: left;
+	margin-top: -26px;
+}
+
+/* Customizes appearance of input fields when bottom error message appears */
+#questions .container.error input {
+  border-color: rgba(220, 53, 69, 1);
+}
+
+/* Customizes appearance of text displayed in bottom error message */
+#questions .container.error small {
+  color: rgba(220, 53, 69, 1);
+  visibility: visible;
+}
+
+/* Makes sure appearance of input fields is default when neutral is called */
+#questions .container.neutral input {
+  border-color: none;
+}
+
+/* Customizes appearance of input fields when bottom success message disappers */
+#questions .container.success input {
+  border-color: #00C234;
+}
+
+/* Submit button format */
+.submit {
+  color: #000;
+  background: #ddd;
+  font-weight: inherit;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+/* Gives submit button a "pressed-down" effect */
+.submit:active {
+  background-color: #ddd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* submit button on hover */
+.submit:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Ensures form is responsive */
+
+/* Applies to 650px and down */
+@media only screen and (max-width: 650px) {
+  #questions {
+    min-width: 550px;
+  }
+}
+
+/* Applies to 550px and down */
+@media only screen and (max-width: 550px) {
+  #questions {
+    min-width: 450px;
+  }
+}
+
+/* Applies to 450px and down */
+@media only screen and (max-width: 450px) {
+  #questions {
+    min-width: 350px;
+  }
+}
+
+/* Applies to 350px and down */
+@media only screen and (max-width: 350px) {
+  #questions {
+    min-width: 300px;
+  }
+}

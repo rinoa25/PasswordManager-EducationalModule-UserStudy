@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- page will not show up in any search engine results -->
+    <meta charset="utf-8" name="robots" content="noindex, nofollow">
+    <!-- Sets title of web tab -->
+    <title>Introduction to Password Managers</title>
+    <!-- Icons are imported (thus applied) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.min.css" />
+    <!-- Personal CSS is imported (thus applied) -->
+    <link rel="stylesheet" href="css/introduction.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="logo">Education Module</div>
+      <input type="checkbox" id="click">
+
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <ul>
+        <li><a href="#issues">Issues</a></li>
+        <li><a href="#combined">Definition & Example</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+      </ul>
+    </nav>
+
+    <div class="headerimage">
+      <div class="headertext">
+        <h1>Intro to Password Managers</h1>
+        <h3>Now is the time to change your behavior, and learn about the password manager</h3>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="sectiontitle" id="issues">
+        <h1>Issues of Passwords</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="categorycol">
+          <img src="images/issue1.jpg" alt="" style="width:100%;display:block;">
+          <div class="overlayposition">
+            <div class="categoryname">The number of passwords that you need to create might have significantly increased due to the increasing number of applications and websites you need to sign up for. The safest way to store your password is just to memorize them all. However, you know that most of us are not able to memorize all our passwords except we reuse one or two for all of our accounts</div>
+          </div>
+        </div>
+
+        <div class="categorycol">
+          <img src="images/issue2.jpg" alt="" style="width:100%;display:block;">
+          <div class="overlayposition">
+            <div class="categoryname">If you are using the same weak password for your accounts, then you leave yourself open to password-based attacks. </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sectiontitle" id="combined">
+        <h1>Definition & Example</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="schedulecol">
+          <table>
+            <tr>
+              <th>Definition</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>Password managers are here to secure your digital life.  A password manager is a program that allows you to generate complex passwords and store all your passwords fully encrypted in a safe location.  Generated passwords by the password manager make your online world less vulnerable to password-based attacks.</td>
+              <td>Browser-based password managers like Google Chrome, Firefox, and Safari are the most common type of password manager and it stores your passwords in the cloud. Storing in a cloud means your passwords are always accessible for you from anywhere at any time. Your passwords in browser-based password managers are encrypted before being stored in the cloud servers</td>
+            </tr>
+            <tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="sectiontitle" id="benefits">
+        <h1>What are the benefits of using a password manager?</h1>
+        <p>Using a password manager can greatly increase your accounts by essentially enforcing security best practices. Here are some of the important advantages.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="aboutcol">
+          <div class="card">
+            <p><i class="fa fa-check"></i></p>
+            <h3>Autosave & fill</h3>
+            <p>You don't have to remember complex passwords</p>
+          </div>
+        </div>
+
+        <div class="aboutcol">
+          <div class="card">
+            <p><i class="fa fa-check"></i></p>
+            <h3>Protection</h3>
+            <p>It protects your information from cyber security threats</p>
+          </div>
+        </div>
+
+        <div class="aboutcol">
+          <div class="card">
+            <p><i class="fa fa-check"></i></p>
+            <h3>Browser-based</h3>
+            <p>Browser-based PMs are safe, easy-to-use, and free</p>
+          </div>
+        </div>
+
+      </div>
+
+      <button type="submit" class="submit" onclick="myLink();">Continue</button>
+
+    </div>
+
+    <!-- Script points towards sweetalert JS file -->
+    <script src="node_modules\sweetalert2\dist\sweetalert2.all.min.js"></script>
+    <!-- Script points towards my JS file -->
+    <script src = "js/introduction.js"></script>
+
+  </body>
+
+</html>

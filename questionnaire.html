@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- page will not show up in any search engine results -->
+    <meta charset="utf-8" name="robots" content="noindex, nofollow">
+    <!-- Sets title of web tab -->
+    <title>Questionnaire</title>
+    <!-- Personal CSS is imported (thus applied) -->
+    <link rel="stylesheet" href="css/questionnaire.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <form action="/datasubmission/" id="questions" name="questionnaire" onsubmit="event.preventDefault();" autocomplete="off" method="post">
+
+        <fieldset>
+
+          <div class="firstset">
+
+            <div class="defaultrow">
+              <div class="column">
+                <h2 class="slide" style="background-color: #5562eb;color:white;">Personal Info</h2>
+              </div>
+              <div class="column">
+                <h2 class="slide2" style="background-color:#FFFFFF;color: #2C3E50;">Study Feedback</h2>
+              </div>
+            </div>
+
+            <div class="container">
+
+              <label><b>What gender do you identify as?</b></label>
+              <select name="workergender" id="workergender">
+                <option style="color:gray" value="null" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>What is your age?</b></label>
+              <select name="workerage" id="workerage">
+                <option style="color:gray" value="null" disabled selected>Select your age</option>
+                <option value="18-25">18 - 25 years old</option>
+                <option value="26-35">26 - 35 years old</option>
+                <option value="36-50">36 - 50 years old</option>
+                <option value="50+">50+ years old</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>What is the highest degree / level of education you have completed?</b></label>
+              <select name="workereducation" id="workereducation">
+                <option style="color:gray" value="null" disabled selected>Select your education level</option>
+                <option value="bachelor’s degree">Bachelor’s degree</option>
+                <option value="master’s degree">Master’s degree</option>
+                <option value="PhD or higher">PhD or higher</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>What is your first language (i.e., mother tongue)?</b></label>
+              <select name="workerlanguage" onchange="checkLanguage();" id="workerlanguage">
+                <option style="color:gray" value="null" disabled selected>Select your first language</option>
+                <option value="english">English</option>
+                <option value="other">Other</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="row" style="display:none;">
+
+              <div class="column" style="padding-right:5px;">
+                <select name="workerlanguage2" onchange="revertLanguage();" id="workerlanguage2">
+                  <option style="color:gray" value="null" disabled selected>Select your first language</option>
+                  <option value="english">English</option>
+                  <option value="other">Other</option>
+                  <option value="prefer not to answer">Prefer not to answer</option>
+                </select>
+              </div>
+
+              <div class="column" style="padding-right:-5px;">
+                <div class="container">
+                  <input name = "DummyUsername" type="text" style="display:none;">
+                  <input name="otherlanguage" id="otherlanguage" type="text" autocorrect="off" spellcheck="false" autocomplete="off" value="">
+                  <!-- Displays bottom error message towards this specific dropdown selection -->
+                  <div class="bottomerror">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>What is your primary area of study or work?</b></label>
+              <select name="workerstudy" onchange="checkArea();" id="workerstudy">
+                <option style="color:gray" value="null" disabled selected>Select your area of study / work</option>
+                <option value="science">Science</option>
+                <option value="engineering and applied science">Engineering and Applied Science</option>
+                <option value="energy and nuclear science">Energy and Nuclear Science</option>
+                <option value="education">Education</option>
+                <option value="business and it">Business and IT</option>
+                <option value="other">Other</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="secondrow" style="display:none;">
+
+              <div class="column" style="padding-right:5px;">
+                <select name="workerstudy2" onchange="revertArea();" id="workerstudy2">
+                  <option style="color:gray" value="null" disabled selected>Select your area of study / work</option>
+                  <option value="science">Science</option>
+                  <option value="engineering and applied science">Engineering and Applied Science</option>
+                  <option value="energy and nuclear science">Energy and Nuclear Science</option>
+                  <option value="education">Education</option>
+                  <option value="business and it">Business and IT</option>
+                  <option value="other">Other</option>
+                  <option value="prefer not to answer">Prefer not to answer</option>
+                </select>
+              </div>
+
+              <div class="column" style="padding-right:-5px;">
+                <div class="container">
+                  <input name = "DummyUsername2" type="text" style="display:none;">
+                  <input name="otherstudy" id="otherstudy" type="text" autocorrect="off" spellcheck="false" autocomplete="off" value="">
+                  <!-- Displays bottom error message towards this specific dropdown selection -->
+                  <div class="bottomerror">
+                    <small></small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>Please select “Forty-six” from the list</b></label>
+              <select name="trick" id="trick">
+                <option style="color:gray" value="null" disabled selected>Select the number</option>
+                <option value="67">67</option>
+                <option value="46">46</option>
+                <option value="12">12</option>
+                <option value="59">59</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="submit" onclick="validate();">Next</button>
+
+          </div>
+
+          <div class="secondset" style="display:none;">
+
+            <div class="defaultrow">
+              <div class="column">
+                <h2 class="slide" style="background-color:#FFFFFF;color: #2C3E50;">Personal Info</h2>
+              </div>
+              <div class="column">
+                <h2 class="slide2" style="background-color: #5562eb;color:white;">Study Feedback</h2>
+              </div>
+            </div>
+
+            <div class="container">
+
+              <label><b>Have you ever used a password manager?</b></label>
+              <select name="usedpm" id="usedpm">
+                <option style="color:gray" value="null" disabled selected>Select your option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>Do you understand the theory behind password managers?</b></label>
+              <select name="understandtheory" id="understandtheory">
+                <option style="color:gray" value="null" disabled selected>Select your option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>Do you think that password managers are secure?</b></label>
+              <select name="securepm" id="securepm">
+                <option style="color:gray" value="null" disabled selected>Select your option</option>
+                <option value="yes, I trust password managers">Yes, I trust password managers</option>
+                <option value="no, I do not trust password managers">No, I do not trust password managers</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container">
+
+              <label><b>Are you going to create your future accounts using a password manager?</b></label>
+              <select name="futurepm" id="futurepm">
+                <option style="color:gray" value="null" disabled selected>Select your option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container" id="experimental">
+
+              <label><b>How do you find educational module about password managers?</b></label>
+              <select name="educationalmodule" id="educationalmodule">
+                <option style="color:gray" value="null" disabled selected>Select your option</option>
+                <option value="it was useful">It was useful </option>
+                <option value="I do not understand it completely">I do not understand it completely</option>
+                <option value="I have no idea">I have no idea</option>
+                <option value="prefer not to answer">Prefer not to answer</option>
+              </select>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <div class="container" id="control">
+
+              <label><b>Can you describe the reason why you used/did not use the random password generator?</b></label>
+              <textarea name="workerreason" id="workerreason" placeholder="Write your reason here" value=""></textarea>
+
+              <!-- Displays bottom error message towards this specific dropdown selection -->
+              <div class="bottomerror">
+                <small></small>
+              </div>
+
+            </div>
+
+            <input type="text" class="workerID" id="workerID" name="workerID" value="" style="display:none;">
+            <input type="text" class="group" id="group" name="group" value="" style="display:none;">
+            <input type="text" class="signupOption" id="signupOption" name="signupOption" value="" style="display:none;">
+            <input type="text" class="passPolicy" id="passPolicy" name="passPolicy" value="" style="display:none;">
+            <input type="text" class="randomPass" id="randomPass" name="randomPass" value="" style="display:none;">
+            <input type="text" class="registeredPass" id="registeredPass" name="registeredPass" value="" style="display:none;">
+            <input type="text" class="loginPass" id="loginPass" name="loginPass" value="" style="display:none;">
+            <input type="text" class="match" id="match" name="match" value="" style="display:none;">
+            <input type="text" class="agreed" id="agreed" name="agreed" value="" style="display:none;">
+            <input type="text" class="finalLanguage" id="finalLanguage" name="finalLanguage" value="" style="display:none;">
+            <input type="text" class="finalArea" id="finalArea" name="finalArea" value="" style="display:none;">
+            <input type="text" class="finalModule" id="finalModule" name="finalModule" value="" style="display:none;">
+            <input type="text" class="finalReason" id="finalReason" name="finalReason" value="" style="display:none;">
+
+            <!-- Submit button -->
+            <button type="submit" class="submit" onclick="validate2();">Submit</button>
+
+          </div>
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
+    <!-- Script points towards sweetalert JS file -->
+    <script src="node_modules\sweetalert2\dist\sweetalert2.all.min.js"></script>
+    <!-- Script points towards my JS file -->
+    <script src = "js/questionnaire.js"></script>
+
+    <script>$('input').attr('autocomplete', 'off');</script>
+
+  </body>
+
+</html>

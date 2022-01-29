@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- page will not show up in any search engine results -->
+    <meta charset="utf-8" name="robots" content="noindex, nofollow">
+    <!-- Sets title of web tab -->
+    <title>Opinon Poll</title>
+    <!-- Personal CSS is imported (thus applied) -->
+    <link rel="stylesheet" href="css/opinionpoll.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <form id="questions" name="opinonpoll" onsubmit="event.preventDefault();checkValidation();" method="post">
+
+        <fieldset>
+
+          <h2 class="header" id="controlTitle">Would you like to create your future accounts with a password manager?</h2>
+
+          <h2 class="header" id="experimentalTitle">Click the statement(s) you agree with:</h2>
+
+          <div class="inputGroup" id="experimentalQn1">
+            <input id="option1" name="option1" type="checkbox"/>
+            <label for="option1">"I will continue to secure my accounts using a password manager"</label>
+          </div>
+
+          <div class="inputGroup" id="experimentalQn2">
+            <input id="option2" name="option2" type="checkbox"/>
+            <label for="option2">"I will continue to secure my account using a password manager’s secure/unique password suggestions"</label>
+          </div>
+
+          <div class="inputGroup" id="controlQn1">
+            <input id="radio1" name="radio" type="radio"/>
+            <label for="radio1">Yes</label>
+          </div>
+
+          <div class="inputGroup" id="controlQn2">
+            <input id="radio2" name="radio" type="radio"/>
+            <label for="radio2">No</label>
+          </div>
+
+          <button type="submit" class="submit">Continue</button>
+
+        </fieldset>
+
+      </form>
+
+    </div>
+
+    <!-- Script points towards sweetalert JS file -->
+    <script src="node_modules\sweetalert2\dist\sweetalert2.all.min.js"></script>
+    <!-- Script points towards my JS file -->
+    <script src = "js/opinionpoll.js"></script>
+
+  </body>
+
+</html>

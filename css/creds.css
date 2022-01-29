@@ -1,0 +1,196 @@
+/* CSS file for verification.html, registration.html, & login.html */
+
+/* Imports custom font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Sets the font of the entire page, customizes background & ensures form is responsive */
+html, body {
+  font-family: montserrat, arial, verdana;
+  background: #CCCCFF;
+}
+
+/* Ensures everything is positioned correctly */
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Ensures form is centered */
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Customizes the form */
+#creds {
+  /* Customizes the size of the form */
+  min-width: 650px;
+  /* Customizes the position of the form to be centered */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* Ensures title and button are centered */
+	text-align: center;
+}
+
+/* Customizes the form further */
+#creds fieldset {
+  background: #FFFFFF;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	width: 85%;
+}
+
+/* Customizes header of form */
+.header {
+  font-size: 18px;
+  text-transform: uppercase;
+	color: #2C3E50;
+	margin: 25px auto;
+  font-weight: bolder;
+}
+
+/* Customizes password manager info message on top of registration form */
+#topinfo {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: rgba(199, 228, 240, 1);
+  border-color: rgba(173, 200, 212, 1);
+  color: rgba(69, 96, 106,1);
+}
+
+/* Customizes position of the text inside password manager info message */
+#topinfo p {
+  margin-top: -17px;
+  margin-left: 15px;
+  margin-bottom: 3px;
+}
+
+/* Ensures labels are positioned / formatted correctly*/
+.container {
+  width: 100%;
+}
+
+/* Customizes position & font size of labels*/
+label{
+  float: left;
+  margin-bottom: 5px;
+  font-size: small;
+}
+
+/* Customizes the input boxes */
+#creds input[type=text] {
+  color: #2C3E50;
+  border: 1px solid #CCCCCC;
+	border-radius: 3px;
+  outline: none;
+  width: 100%;
+	margin-bottom: 35px;
+}
+
+/* Customizes the font of placeholder */
+input::placeholder {
+  font-family: arial;
+}
+
+/* Customizes position of bottom error message */
+.bottomerror {
+  position: absolute;
+  visibility: hidden;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -30px;
+}
+
+/* Customizes appearance of input fields when bottom error message appears */
+#creds .container.error input {
+  border-color: rgba(220, 53, 69, 1);
+}
+
+/* Customizes appearance of text displayed in bottom error message */
+#creds .container.error small {
+  color: rgba(220, 53, 69, 1);
+  visibility: visible;
+}
+
+/* Makes sure appearance of input fields is default when neutral is called */
+#creds .container.neutral input {
+  border-color: none;
+}
+
+/* Customizes appearance of input fields when bottom success message disappers */
+#creds .container.success input {
+  border-color: #00C234;
+}
+
+/* Customizes appearance of text displayed in bottom success message */
+#creds .container.success small {
+  color: #00C234;
+  visibility: visible;
+}
+
+/* Submit button format */
+.submit {
+  color: #000;
+  background: #ddd;
+  font-weight: inherit;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: none;
+  box-shadow: 0 9px #999;
+}
+
+/* Gives submit button a "pressed-down" effect */
+.submit:active {
+  background-color: #ddd;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* submit button on hover */
+.submit:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Ensures form is responsive */
+
+/* Applies to 650px and down */
+@media only screen and (max-width: 650px) {
+  #creds {
+    min-width: 550px;
+  }
+}
+
+/* Applies to 550px and down */
+@media only screen and (max-width: 550px) {
+  #creds {
+    min-width: 450px;
+  }
+}
+
+/* Applies to 450px and down */
+@media only screen and (max-width: 450px) {
+  #creds {
+    min-width: 350px;
+  }
+}
+
+/* Applies to 350px and down */
+@media only screen and (max-width: 350px) {
+  #creds {
+    min-width: 300px;
+  }
+}

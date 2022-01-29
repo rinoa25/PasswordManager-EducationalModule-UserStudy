@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- page will not show up in any search engine results -->
+    <meta charset="utf-8" name="robots" content="noindex, nofollow">
+    <!-- Sets title of web tab -->
+    <title>Sign-Up Options</title>
+    <!-- Personal CSS is imported (thus applied) -->
+    <link rel="stylesheet" href="css/prerequisite.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <div class="header">
+      <h1>Sign-Up Options</h1>
+      <p>Choose one of the following to continue the study</p>
+    </div>
+
+    <div class="content">
+
+      <div class="row">
+
+        <div class="column active">
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="images/avatar.png" alt="option1" style="width:100%">
+            <div class="container">
+              <h4><b>Sign up with a password manager</b></h4>
+              <input class="submit" id="pm" type="submit" value="Submit" onclick="validate();">
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="images/avatar.png" alt="option2" style="width:100%">
+            <div class="container">
+              <h4><b>Sign up without a password manager</b></h4>
+              <input class="submit" id="nopm" type="submit" value="Submit" onclick="validate2();">
+            </div>
+          </div>
+        </div>
+
+        <div class="column active">
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Script points towards sweetalert JS file -->
+    <script src="node_modules\sweetalert2\dist\sweetalert2.all.min.js"></script>
+    <!-- Script points towards my JS file -->
+    <script src = "js/prerequisite.js"></script>
+
+  </body>
+
+</html>

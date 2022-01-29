@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- text direction is set to left to right -->
+<html lang="en" dir="ltr">
+  <head>
+    <!-- page will not show up in any search engine results -->
+    <meta charset="utf-8" name="robots" content="noindex, nofollow">
+    <!-- Sets title of web tab -->
+    <title>Study Completed</title>
+    <!-- Personal CSS is imported (thus applied) -->
+    <link rel="stylesheet" href="css/completed.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- style media="screen" allows us to specify what we want to do on different sized screens -->
+    <style media="screen"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <div class="box">
+
+        <p class="heading">THANK YOU FOR YOUR SUBMISSION!</p>
+
+        <div class="questions">
+
+          <details open>
+            <summary>Contact Info</summary>
+            <p class="text">If you have any questions about the research study, please feel free to ask by contacting <a href="mailto:Samira.Zibaei@ontariotechu.net">Samira Zibaei</a>.</p>
+          </details>
+
+          <button type="submit" class="submit" onclick="myLink();">MTurk Homepage</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Script points towards sweetalert JS file -->
+    <script src="node_modules\sweetalert2\dist\sweetalert2.all.min.js"></script>
+    <!-- Script points towards my JS file -->
+    <script src = "js/completed.js"></script>
+
+  </body>
+
+</html>
